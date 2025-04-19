@@ -1,0 +1,101 @@
+# Real-Time and Image-Based Object Detection using YOLOv8 (Flask Web App)
+
+This is a simple Flask-based web application that allows users to:
+- Detect objects in uploaded images using YOLOv8
+- Detect objects in real-time using webcam feed
+- View detection results directly in the browser
+
+🧑‍💻 Developed By
+Shashank Gowda H M 
+📸 Instagram:shashank.gowda.hm
+
+
+## 🚀 Features
+
+- Upload multiple images for object detection
+- Live object detection using webcam
+- Saves results to `static/results/`
+- Organized UI with Flask templates (`index.html`, `result.html`, `live.html`)
+
+---
+
+## 📁 Project Structure
+
+```
+project/
+├── static/
+│   ├── uploads/        # Uploaded images
+│   └── results/        # YOLOv8 processed images
+├── templates/
+│   ├── index.html      # Upload & live detection interface
+│   ├── result.html     # Shows result images
+│   └── live.html       # Live detection interface
+├── app.py              # Main Flask app
+├── requirements.txt    # Python dependencies
+└── README.md
+```
+
+---
+
+## 📦 Requirements
+
+Create a virtual environment and install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Or, if you want to install them manually:
+
+```bash
+pip install Flask==2.2.5
+pip install ultralytics==8.0.205
+pip install opencv-python==4.9.0.80
+```
+
+---
+
+## ▶️ How to Run
+
+```bash
+python app.py
+```
+
+Then open your browser and go to:  
+**http://127.0.0.1:5000/**
+
+---
+
+## 🖼 Image Detection
+
+- Upload one or multiple `.jpg`, `.png`, etc.
+- Model performs detection and saves results.
+- View results on `result.html`
+
+## 🎥 Real-Time Detection
+
+- Click on the **Live Detection** button
+- Real-time annotated video stream appears in browser
+
+---
+
+## 📝 Notes
+
+- Uses YOLOv8s model (`yolov8s.pt`) for detection.
+- Change the model in `app.py` if needed (`YOLO('best.pt')`).
+
+---
+
+## 📜 License
+
+Free to use and modify. If you use this code, a star ⭐ on GitHub is appreciated!
+
+---
+
+## 📄 Requirements.txt
+
+```
+Flask==2.2.5
+ultralytics==8.0.205
+opencv-python==4.9.0.80
+```

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .result-container {
+            display: inline-block;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .result-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: block;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Detection Result</h1>
+        {% for image in result_images %}
+            <img class="result-image" src="{{ url_for('static', filename='results/' + image) }}" alt="Result Image">
+        {% endfor %}
+        <br><br>
+        <a href="/" class="btn">Upload Another Image</a>
+    </div>
+</body>
+</html>
